@@ -17,4 +17,4 @@ COPY *.go ./
 
 RUN go build
 
-CMD /usr/local/go/bin/go test --json | jq -s | tee test-output.json
+CMD /usr/local/go/bin/go test --json | jq -s | tee test-results.json
