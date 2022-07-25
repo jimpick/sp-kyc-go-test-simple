@@ -3,3 +3,7 @@ description: testing running go test via GitHub Action
 runs:
   using: docker
   image: Dockerfile
+  entrypoint: /bin/sh
+  args:
+    - "-c"
+    - "go test --json | jq -s | tee test-output.json"
