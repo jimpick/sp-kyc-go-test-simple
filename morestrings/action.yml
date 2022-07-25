@@ -1,0 +1,5 @@
+name: morestrings
+description: testing running go test via GitHub Action
+runs:
+  using: docker
+  image: Dockerfile
