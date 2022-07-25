@@ -6,4 +6,4 @@ runs:
   entrypoint: /bin/sh
   args:
     - "-c"
-    - "(cd /usr/src/app && go test --json | jq -s) | tee test-output.json"
+    - "mkdir -p output; (cd /usr/src/app && go test --json | jq -s) | tee output/test-output.json"
