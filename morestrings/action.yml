@@ -6,4 +6,4 @@ runs:
   entrypoint: /bin/sh
   args:
     - "-c"
-    - "go test --json | jq -s | tee test-output.json"
+    - "pwd && cd /usr/src/app && go test --json | jq -s | tee test-output.json"
